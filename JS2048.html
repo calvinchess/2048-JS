@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="JS2048.css"/>
+        
+        <script src="GameFunctions.js" type="text/javascript"></script>
+        <script src="Solver.js" type="text/javascript"></script>
+        <script src="JS2048.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="game-squares" class="center disable-select disable-dbl-tap-zoom">
+            <div class="new-game-button anti-dark text-anti-dark" onclick="ResetGame()">New Game</div>
+            <div id="toggle-solver-button" class="new-game-button anti-dark text-anti-dark" onclick="ToggleSolver()">Activate Solver</div>
+            <div id="toggle-solver-button" class="new-game-button anti-dark text-anti-dark" onclick="ScoreCurrentGrid()">Score Current Grid</div>
+            <div class="top-margin"></div>
+        </div>
+        <div class="center">
+            <div class="top-margin"></div>
+            <div class="top-margin"></div>
+            <div class="top-margin"></div>
+            <div class="top-margin"></div>
+
+
+            <form class="center">
+                Moves Ahead: <input id="moves-ahead-box" type="text">
+                <br>
+                <div class="top-margin"></div>
+                Average Count: <input id="average-count-box" type="text">
+                <br>
+                <div class="top-margin"></div>
+                Corner Modifier: <input id="corner-modifier-box" type="text">
+                <br>
+                <div class="top-margin"></div>
+                Snake Modifier: <input id="snake-modifier-box" type="text">
+                <br>
+                <div class="top-margin"></div>
+                WhiteSpace Modifier: <input id="whitespace-modifier-box" type="text">
+                <br>
+                <div class="top-margin"></div>
+                Highest Modifier: <input id="highest-modifier-box" type="text">
+                <br>
+                <div class="top-margin"></div>
+                Test Mode: <input id="test-mode-box" type="checkbox">
+                <br>
+                <div class="top-margin"></div>
+                <input type="button" onclick="ChangeSolverValues()" value="Submit">
+            </form>
+        </div>
+        
+
+        <script>
+            GenerateSquares();
+            InitializeSolverValues();
+        </script>
+    </body>
+</html>
